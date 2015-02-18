@@ -1,7 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sdobnikov_ie
- * Date: 18.02.15
- * Time: 15:51
- */ 
+    function sql_connect (){
+        mysql_connect(['localhost', 'root', '']) ;
+        mysql_select_db('test');
+    }
+
+    function sql_query ($res){
+        sql_connect();
+        $res = mysql_query('SELECT * FROM news');
+    }
+
+    function sql_extract (){
+
+    }
